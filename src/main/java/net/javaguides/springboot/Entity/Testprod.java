@@ -23,8 +23,13 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "testprods")
-public class TestProd {
 
+/**
+ * Testprod
+ */
+public class Testprod {
+
+  
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -37,6 +42,5 @@ public class TestProd {
   private LocalDateTime dateUpdated;
 
 
-
-
+  
 }

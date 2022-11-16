@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import net.javaguides.springboot.Entity.TestProd;
+import net.javaguides.springboot.Entity.Testprod;
 import net.javaguides.springboot.Repository.TestProdRepository;
 import net.javaguides.springboot.Services.TestProdService;
 
@@ -21,10 +21,17 @@ public class TestProdServiceImpl implements TestProdService{
 
 
   @Override
-  public List<TestProd> searchTestProducts(String query) {
+  public List<Testprod> searchTestProducts(String query) {
    
-    List<TestProd> testProds = testProdRepository.searchProducts(query);
+    List<Testprod> testProds = testProdRepository.searchProducts(query);
     return testProds;
+  }
+
+
+  @Override
+  public Testprod createTestProduct(Testprod testProds) {
+   
+    return testProdRepository.save(testProds);
   }
 
   
